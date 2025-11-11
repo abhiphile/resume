@@ -1,0 +1,179 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate PDF is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Abhishek Kumar} & Email: \href{mailto:abhishek.code.jobs@gmail.com}{abhishek.code.jobs@gmail.com}\\
+  \href{https://portfolio.abhishekcode.in/}{portfolio.abhishekcode.in} & Mobile: \href{tel:+918797111643}{+91 8797111643} \\
+  & \href{https://github.com/abhiphile}{GitHub} $|$ \href{https://www.linkedin.com/in/abhishek-kumar-nitdelhi/}{LinkedIn} $|$ \href{https://leetcode.com/u/abhishek_nitdelhi/}{LeetCode}
+\end{tabular*}
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {National Institute of Technology Delhi}{New Delhi, India}
+      {B.Tech in Electronics and Communication Engineering; CGPA: 7.85/10.0}{2021 -- 2025}
+    \resumeSubheading
+      {National Institute of Technology Delhi}{New Delhi, India}
+      {Minor in AI/ML; CGPA: 8.22/10.0}{2021 -- 2025}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Oracle}{Bengaluru, India}
+      {Software Development Engineer 1}{July 2025 -- Present}
+      \resumeItemListStart
+        \resumeItem{SBC Sizing Tool}
+          {Engineered an extrapolation system using FastAPI and Oracle SQL to predict hardware requirements (CPU, cores, memory) for deployments, improving prediction accuracy by 30\%.}
+        \resumeItem{MCP Automation}
+          {Designed internal tools to streamline testing workflows, perform root cause analysis, and parse logs automatically, reducing debugging time by 40\%.}
+        \resumeItem{Performance Optimization}
+          {Collaborated with a team of 10 to enhance Session Border Controller (SBC) performance by optimizing compute utilization and reducing response latency under high-load conditions by 3\%.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Oracle}{Bengaluru, India}
+      {Software Development Intern}{Jan 2025 -- July 2025}
+      \resumeItemListStart
+        \resumeItem{Cloud-based SBC Tool}
+          {Developed a FastAPI backend with Oracle SQL database to predict resource requirements by extrapolating datapoints; deployed on Oracle Cloud.}
+        \resumeItem{Code Security}
+          {Improved code security by eliminating 1,000+ instances of unsafe C/C++ functions, reducing buffer overflow and memory corruption risks.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Google Summer of Code (SymPy)}{Remote}
+      {Open Source Contributor}{May 2024 -- Sept 2024}
+      \resumeItemListStart
+        \resumeItem{Control Module Enhancement}
+          {Contributed to SymPy's Control Module, enhancing State Space and Transfer Function classes with symbolic plotting and system interconnections (Series, Parallel, Feedback).}
+        \resumeItem{Code Contributions}
+          {Merged 11+ PRs with 3,000+ lines of code, 100+ unit tests, and comprehensive documentation, improving reliability for the open-source control systems community.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{CacheIt}
+      {High-performance in-memory caching server in C++ with epoll and multithreading, supporting core data types (HashMap, Set, Sorted Set) and LRU/LFU eviction policies. Achieved 0.21ms avg latency and 99.99\% success rate under load. \href{https://github.com/abhiphile/cacheit}{GitHub} $\cdot$ \href{https://hub.docker.com/r/abhishek194/cacheit}{Docker Hub}}
+    \resumeSubItem{Fermat MCP}
+      {FastMCP server for advanced mathematical computations with NumPy, SymPy, and Matplotlib integration, enabling 50+ operations across calculus, algebra, and statistics. \href{https://github.com/abhiphile/fermat-mcp}{GitHub} $\cdot$ \href{https://smithery.ai/server/@abhishek/fermat-mcp}{Smithery MCP}}
+  \resumeSubHeadingListEnd
+
+%-----------SKILLS-----------------
+\section{Technical Skills}
+  \resumeSubHeadingListStart
+    \item{
+      \textbf{Languages}{: C++, Python, JavaScript/TypeScript, Bash}
+      \hfill
+      \textbf{Technologies}{: Docker, Git, GitHub Actions, Redis, Linux, CI/CD}
+    }
+    \item{
+      \textbf{Frameworks}{: FastAPI, Express, Next.js, Crow-CPP}
+      \hfill
+      \textbf{Databases}{: PostgreSQL, MongoDB, MySQL, Oracle SQL}
+    }
+    \item{
+      \textbf{Libraries}{: React, NumPy, SymPy, Matplotlib}
+      \hfill
+      \textbf{Concepts}{: Concurrency, Memory Management, DBMS, Design Patterns}
+    }
+  \resumeSubHeadingListEnd
+
+%-----------ACHIEVEMENTS-----------------
+\section{Achievements}
+  \resumeSubHeadingListStart
+    \item{Selected for \textbf{Google Summer of Code (GSoC) 2024}, out of 43,984 applicants from 172 countries (top 0.02\%). Contributed 3,000+ lines of code and merged 127 commits to SymPy.}
+    \item{Open source contributor at \textbf{GNOME Foundation}, actively contributing to GNOME/Graphs.}
+    \item{Solved 600+ LeetCode problems with a 1600+ rating, demonstrating strong problem-solving and algorithmic efficiency.}
+    \item{Secured rank 32 in the competitive CodeRush coding competition.}
+  \resumeSubHeadingListEnd
+
+\end{document}
